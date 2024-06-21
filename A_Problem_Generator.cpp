@@ -69,6 +69,8 @@ int main()
     cin >> t;
     while (t--)
     {
+        //Learn the Map STL, as it is very kind of STL to Learn so far..
+        
          int n,m;
          cin>>n>>m;
          string s;

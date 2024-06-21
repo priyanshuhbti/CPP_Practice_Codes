@@ -1,38 +1,108 @@
-#include <iostream>
-#include <vector>
-#include <algorithm>
+/* ॐ श्री वेंकटेश्वराये नमो नमः */ 
+/* श्रीमन नारायण नमो नमः */
+
+#include <bits/stdc++.h>
 using namespace std;
 
-int main() {
-    int t;
-    cin >> t;
+/* Code written by Priyanshu Yadav IIT Kanpur  */
 
-    while (t--) {
-        int n, f, k;
-        cin >> n >> f >> k;
-        
-        vector<int> a(n);
-        for (int i = 0; i < n; ++i) {
-            cin >> a[i];
-        }
-        
-        int fav_value = a[f - 1]; // Dmitry's favorite cube value
-        
-        // Sort the array in non-increasing order
-        sort(a.rbegin(), a.rend());
-        
-        // Check the position of the favorite cube's value
-        int count_fav_value = count(a.begin(), a.end(), fav_value);
-        int count_in_top_k = count(a.begin(), a.begin() + k, fav_value);
-        
-        if (count_in_top_k == count_fav_value) {
-            cout << "YES" << endl; // Always removed
-        } else if (count_in_top_k == 0) {
-            cout << "NO" << endl; // Never removed
-        } else {
-            cout << "MAYBE" << endl; // Depends on the sorting order
-        }
+/* TYPES  */
+#define ll long long
+#define pii pair<int, int>
+#define pll pair<long long, long long>
+#define vi vector<int>
+#define vll vector<long long>
+#define mii map<int, int>
+#define si set<int>
+#define sc set<char>
+
+/* FUNCTIONS */
+#define f(i, s, e) for (long long int i = s; i < e; i++)
+#define cf(i, s, e) for (long long int i = s; i <= e; i++)
+#define rf(i, e, s) for (long long int i = e - 1; i >= s; i--)
+#define pb push_back
+#define eb emplace_back
+
+
+/* PRINTS */
+template <class T>
+void print(vector<T> &v) { cout << "{"; for (auto x : v) cout << x << ","; cout << "\b}"; }
+void input(vector<ll>& v) {
+    for (auto& x : v) {
+        cin >> x;
     }
+}
+/* UTILS */
+#define MOD 1000000007
+#define PI 3.1415926535897932384626433832795
+#define read(type) readInt<type>()
+ll min(ll a, int b) { if (a < b) return a; return b; }
+ll min(int a, ll b) { if (a < b) return a; return b; }
+ll max(ll a, int b) { if (a > b) return a; return b; }
+ll max(int a, ll b) { if (a > b) return a; return b; }
+ll gcd(ll a, ll b) { if (b == 0) return a; return gcd(b, a % b); }
+ll lcm(ll a, ll b) { return a / gcd(a, b) * b; }
+string to_upper(string a) { for (int i = 0; i < (int)a.size(); ++i) if (a[i] >= 'a' && a[i] <= 'z') a[i] -= 'a' - 'A'; return a; }
+string to_lower(string a) { for (int i = 0; i < (int)a.size(); ++i) if (a[i] >= 'A' && a[i] <= 'Z') a[i] += 'a' - 'A'; return a; }
+bool prime(ll a) { if (a == 1) return 0; for (int i = 2; i <= round(sqrt(a)); ++i) if (a % i == 0) return 0; return 1; }
+void yes() { cout << "YES\n"; }
+void no() { cout << "NO\n"; }
+
+/*  All Required define Pre-Processors and typedef Constants */
+typedef long int int32;
+typedef unsigned long int uint32;
+typedef long long int int64;
+typedef unsigned long long int uint64;
+
+/* clang-format on */
+
+/* Main()  function */
+int main()
+{
+     ios::sync_with_stdio(0); 
+      cin.tie(0);
+    // #ifndef ONLINE_JUDGE
+    // freopen("input.txt", "r", stdin);
+    // #endif
+
+    ll t;
+    cin >> t;
+    while (t--)
+    {// very tricky question ..
+
+        ll n,f,k;
+        cin>>n>>f>>k;
+         vector<ll> vec(n);
+                for(int i=0; i<n; ++i){
+                    cin>>vec[i];
+                }
+                ll x=vec[f-1];
+
+        sort(vec.begin(),vec.end());
+        reverse(vec.begin(), vec.end()) ;
+     
+     int y=0, c=0;
+
+     for(int i=0; i<n; i++){
+         if(vec[i]>x){
+            y++;
+                     }
+         else if(vec[i]==x){
+            c++;         }else{
+                break;
+
+            }            
+     }
+
+    if(k<=y){cout<<"YES"<<endl;}
+    else if(k>=(y+c)){ cout<<"NO"<<endl;}
+    else{cout<<"MAYBE"<<endl;}
+
+
+
+     
+    }
+
 
     return 0;
 }
