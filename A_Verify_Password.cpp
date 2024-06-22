@@ -68,33 +68,36 @@ int main()
     ll t;
     cin >> t;
     while (t--)
-    {// very tricky question ..
+    {
+        //Solution to this problem..
+        ll n;
+        cin>>n;
+        // three cases bnange ..
+        // 1,.digit sare phle ..
+        //2.digits and letters in the increasing order.
 
-        long long n, f, k;
-    cin >> n >> f >> k;
-    f -= 1;
-    k -= 1;
-    vector<long long> a(n);
-    for (long long i = 0; i < n; ++i) {
-        cin >> a[i];
+        //My approach :- I was thinking that if the str[i] is less than str[i+1] then it cannot be possible..
+        //But the editor comes with more easy solution .. that is to sort the string and check it ..
+
+          
+     string str;
+     int cnt=0;
+     cin>>str;
+
+     string s =str;
+     sort(s.begin(),s.end());
+     if(s==str){
+        cout<<"YES"<<endl;
+     }else{
+        cout<<"NO"<<endl;
+
+     }
+
+//Problems solve karo daam lagakar and if problem does not solve the see the editorial..
+//Pretty easy method to gain and learn ..'
+//SOlve the problems and see the editorials of the solutions ..
+
+
     }
-    long long x = a[f];
-    sort(a.begin(), a.end(), greater<long long>());
-    if (a[k] > x) {
-        cout << "NO\n";
-    } else if (a[k] < x) {
-        cout << "YES\n";
-    } else {
-        if (k == n - 1 || a[k + 1] < x) {
-            cout << "YES\n";
-        } else {
-            cout << "MAYBE\n";
-        }
-    }
-
-
-    }
-
-
     return 0;
 }

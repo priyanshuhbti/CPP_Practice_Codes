@@ -68,33 +68,17 @@ int main()
     ll t;
     cin >> t;
     while (t--)
-    {// very tricky question ..
-
-        long long n, f, k;
-    cin >> n >> f >> k;
-    f -= 1;
-    k -= 1;
-    vector<long long> a(n);
-    for (long long i = 0; i < n; ++i) {
-        cin >> a[i];
-    }
-    long long x = a[f];
-    sort(a.begin(), a.end(), greater<long long>());
-    if (a[k] > x) {
-        cout << "NO\n";
-    } else if (a[k] < x) {
-        cout << "YES\n";
-    } else {
-        if (k == n - 1 || a[k + 1] < x) {
-            cout << "YES\n";
-        } else {
-            cout << "MAYBE\n";
+    { 
+          //Solution to this Problems ..
+           int a, b;
+        cin >> a >> b;
+        
+        for (int i = 0; i < 30; i++) {
+            if ((a & (1 << i)) != (b & (1 << i))) {
+                cout << (1ll << i) << "\n";
+                break;
+            }
         }
     }
-
-
-    }
-
-
     return 0;
 }

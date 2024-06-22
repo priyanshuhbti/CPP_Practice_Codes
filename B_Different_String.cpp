@@ -5,6 +5,11 @@
 using namespace std;
 
 /* Code written by Priyanshu Yadav IIT Kanpur  */
+ //Zyada idhar udhar pagalao nhi..Do only codeforces and also do only prepare for your exams 
+         //COdeforces +GATE CSE only..
+         //Zyada in sb me mt pado AI/ML ..Backend ..DEvops ..
+         //Ekk baar rating bn gyi .. then ye sbb tou hota hi rhega 
+
 
 /* TYPES  */
 #define ll long long
@@ -68,33 +73,27 @@ int main()
     ll t;
     cin >> t;
     while (t--)
-    {// very tricky question ..
+    {
+        //SOlution form here onwards..
+        string str;
+        cin>>str;
+        bool ok=false;
 
-        long long n, f, k;
-    cin >> n >> f >> k;
-    f -= 1;
-    k -= 1;
-    vector<long long> a(n);
-    for (long long i = 0; i < n; ++i) {
-        cin >> a[i];
-    }
-    long long x = a[f];
-    sort(a.begin(), a.end(), greater<long long>());
-    if (a[k] > x) {
-        cout << "NO\n";
-    } else if (a[k] < x) {
-        cout << "YES\n";
-    } else {
-        if (k == n - 1 || a[k + 1] < x) {
-            cout << "YES\n";
-        } else {
-            cout << "MAYBE\n";
+        for(int i=1; i<str.length(); i++){
+            if(str[i] !=str[0]){ swap(str[i],str[0]); ok=true; break; }
         }
+        if(!ok){
+            cout<<"NO"<<endl;
+           
+
+        }else{
+            cout<<"YES"<<endl;
+            cout<<str<<endl;
+
+        }
+
+
+
     }
-
-
-    }
-
-
     return 0;
 }

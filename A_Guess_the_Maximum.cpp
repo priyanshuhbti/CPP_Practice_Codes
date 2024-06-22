@@ -59,6 +59,8 @@ typedef unsigned long long int uint64;
 /* Main()  function */
 int main()
 {
+
+    //Graphs and DP is a very important topic and you should be to good at this topics..
      ios::sync_with_stdio(0); 
       cin.tie(0);
     // #ifndef ONLINE_JUDGE
@@ -68,33 +70,23 @@ int main()
     ll t;
     cin >> t;
     while (t--)
-    {// very tricky question ..
-
-        long long n, f, k;
-    cin >> n >> f >> k;
-    f -= 1;
-    k -= 1;
-    vector<long long> a(n);
-    for (long long i = 0; i < n; ++i) {
-        cin >> a[i];
-    }
-    long long x = a[f];
-    sort(a.begin(), a.end(), greater<long long>());
-    if (a[k] > x) {
-        cout << "NO\n";
-    } else if (a[k] < x) {
-        cout << "YES\n";
-    } else {
-        if (k == n - 1 || a[k + 1] < x) {
-            cout << "YES\n";
-        } else {
-            cout << "MAYBE\n";
-        }
-    }
-
+    { 
+        //Solution of this problem is bit tricky ..
+        //Alie will only win when MAX_VLAUE > k so k should be less than the max value of the least
+        //element i and j..
+        int n;
+        cin>>n;
+         vector<int> vec(n);
+                for(int i=0; i<n; ++i){
+                    cin>>vec[i];
+                }
+        int mini= max(vec[0],vec[1]);
+        for(int i=1; i<n-1; i++){
+            mini=min(mini,max(vec[i],vec[i+1]));// This implementation is pretty tough, try to do it..
+             
+        }    
+        cout<<mini-1<<endl;
 
     }
-
-
     return 0;
-}
+} 

@@ -62,8 +62,21 @@ int main()
     cin >> t;
     while (t--)
     {
-        int l,r;
+        
+       // Intusion for this solution is the 2 ki power i ke barabar moves honheg chahe ko bhi integer 
+       //Kyo na ho ..hmesha 2 ki power moves nikalna padega and that is the number of the moves ..
+
+
+      //We can takr bitsize r function for solving this only ..
+      //Pretty easy solution but the problem is bit complex..
+      //Log2 can also be taken..
+        ll l,r;
+      
         cin>>l>>r;
+        int ans= log2(r);
+        cout<<ans<<endl;
+        
+
         
 
     }
