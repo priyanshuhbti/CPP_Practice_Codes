@@ -65,13 +65,19 @@ int main()
     // freopen("input.txt", "r", stdin);
     // #endif
 
-    ll t;
-    cin >> t;
-    while (t--)
-    {
-        int x,y;
-        cin>>x>>y;
-        
+    for(int i=0; i<MOD; i++){
+        int t;
+        cin>>t;
+        if(t ==1999){
+            cout<<"Correct"<<endl;
+                break;
+
+        }else{
+            cout<<"Wrong"<<endl;
+            
+        }
     }
+   
+    
     return 0;
-}   
+}

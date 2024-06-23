@@ -96,8 +96,6 @@ int main()
 //Problems solve karo daam lagakar and if problem does not solve the see the editorial..
 //Pretty easy method to gain and learn ..'
 //SOlve the problems and see the editorials of the solutions ..
-
-
     }
     return 0;
 }
