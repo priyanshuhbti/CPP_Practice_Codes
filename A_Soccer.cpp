@@ -55,64 +55,6 @@ typedef long long int int64;
 typedef unsigned long long int uint64;
 
 /* clang-format on */
-// Function to perform some computations based on the given parameters
-int performComplexCalculation(int initialVal, int divisor, int increment) {
-    int modResult = initialVal % divisor;
-    modResult = divisor - modResult;
-
-    if (increment < modResult) {
-        return initialVal + increment;
-    }
-    if (increment == modResult) {
-        initialVal += increment;
-        while (initialVal % divisor == 0) {
-            initialVal /= divisor; // Reduce the value until it's no longer divisible by divisor
-        }
-        return initialVal;
-    }
-
-    while (true) {
-        int tempValue = modResult;
-        if (initialVal == 1) {
-            break; // Exit loop if the value becomes 1
-        }
-        if (increment >= tempValue) {
-            increment -= tempValue;
-            initialVal += tempValue;
-            while (initialVal % divisor == 0) {
-                initialVal /= divisor; // Again reduce the value until it's no longer divisible
-            }
-            modResult = divisor - initialVal % divisor;
-        } else {
-            initialVal += increment;
-            increment = 0;
-            break; // Exit loop if no more increments are left
-        }
-    }
-
-    if (increment != 0) {
-        return increment % (divisor - 1) + 1; // Return the remaining increment adjusted
-    }
-    return initialVal; // Return the final computed value
-}
-
-// Function to handle input and output for multiple test cases
-void processMultipleTestCases() {
-    int testCaseCount;
-    cin >> testCaseCount; // Read the number of test cases
-    vector<int> outputResults;
-
-    for (int i = 0; i < testCaseCount; ++i) {
-        int paramA, paramB, paramC;
-        cin >> paramA >> paramB >> paramC; // Read parameters for each test case
-        int result = performComplexCalculation(paramA, paramB, paramC);
-        outputResults.push_back(result); // Store the result
-    }
-
-    for (int result : outputResults) {
-        cout << result << endl; // Output the results for each test case
-    }
-}
 
 /* Main()  function */
 int main()
@@ -123,6 +65,21 @@ int main()
     // freopen("input.txt", "r", stdin);
     // #endif
 
-    processMultipleTestCases(); // Call the function to process input and output
+    ll t;
+    cin >> t;
+    while (t--)
+    {
+        int a,b,c,d;
+        cin>>a>>b>>c>>d;
+       if(a<b==c<d){
+        yes();
+
+       }else{
+        no();
+        
+       }
+
+        
+    }
     return 0;
 }

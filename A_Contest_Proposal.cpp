@@ -23,11 +23,11 @@ using namespace std;
 #define pb push_back
 #define eb emplace_back
 
-
 /* PRINTS */
 template <class T>
 void print(vector<T> &v) { cout << "{"; for (auto x : v) cout << x << ","; cout << "\b}"; }
-void input(vector<ll>& v) {
+void input(vector<ll>& v, ll n) {
+    v.resize(n);
     for (auto& x : v) {
         cin >> x;
     }
@@ -59,8 +59,8 @@ typedef unsigned long long int uint64;
 /* Main()  function */
 int main()
 {
-     ios::sync_with_stdio(0); 
-      cin.tie(0);
+    ios::sync_with_stdio(0); 
+    cin.tie(0);
     // #ifndef ONLINE_JUDGE
     // freopen("input.txt", "r", stdin);
     // #endif
@@ -69,33 +69,27 @@ int main()
     cin >> t;
     while (t--)
     {
-        int x,y;
-        // int screen=15;
+        ll n;
+        cin >> n;
+        vll a, b;
+        input(a, n);
+        input(b, n);
+        sort(a.begin(),a.end());
+        sort(b.begin(),b.end());
 
-        cin>>x>>y;
-        //  int sum=15-4*2;
-         int cnt=0;
-         while(x>0 || y>0){
-              if(y>=2){cnt++;
-              y -=2;
-              x -=7;
-
-         }else if(y==1){
-            y -=1;
-            x -=11;
-            cnt++;
-
-
-         }else{
-             x -=15;
-             cnt++;
-
-         }
-        
+        //Bahot choti choti mistakes kr rhe ho priyanshu ji..
+        ll j = 0;
+        ll ans = 0;
+        for (ll i = 0; i < n; i++) {
+            if (b[i]<a[j]) {
+                ans++;
+            } else {
+                j++; //isse sare elements easily compare ho jaenge .. first se second ke..
+                //use this technique instead of double for loop..
+               
+            }
+        }
+        cout << ans << endl;
     }
-     cout<<cnt<<endl;
-    
-} 
-
-return 0;
-  }
+    return 0;
+}
