@@ -73,13 +73,13 @@ int main()
         cin>>a>>b>>c>>d;
        if(a<b==c<d){
         yes();
+        //Sieve Algorithm
 
        }else{
         no();
-        
+
        }
 
-        
     }
     return 0;
 }
