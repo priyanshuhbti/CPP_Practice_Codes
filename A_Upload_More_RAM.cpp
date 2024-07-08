@@ -7,9 +7,7 @@ int main() {
     while (t--) {
         int n, k;
         cin >> n >> k;
-        cout<<(k*(n-1)+1)<<endl;
-        
-        
+        cout<<(k*(n-1)+1)<<endl;       
     }
     return 0;
 }
