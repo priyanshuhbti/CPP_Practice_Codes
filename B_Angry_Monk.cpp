@@ -1,66 +1,89 @@
-#include <iostream>
-#include <vector>
-#include <queue>
+/* ॐ श्री वेंकटेश्वराये नमो नमः */ 
+/* श्रीमन नारायण नमो नमः */
+
+#include <bits/stdc++.h>
 using namespace std;
 
-int minimum_operations(int n, int k, vector<int>& pieces) {
-    // Priority queue to simulate a max-heap
-    priority_queue<int> max_heap;
-    for (int piece : pieces) {
-        max_heap.push(piece);
+/* Code written by Priyanshu Yadav IIT Kanpur  */
+
+/* TYPES  */
+#define ll long long
+#define pii pair<int, int>
+#define pll pair<long long, long long>
+#define vi vector<int>
+#define vll vector<long long>
+#define mii map<int, int>
+#define si set<int>
+#define sc set<char>
+
+/* FUNCTIONS */
+#define f(i, s, e) for (long long int i = s; i < e; i++)
+#define cf(i, s, e) for (long long int i = s; i <= e; i++)
+#define rf(i, e, s) for (long long int i = e - 1; i >= s; i--)
+#define pb push_back
+#define eb emplace_back
+
+/* PRINTS */
+template <class T>
+void print(vector<T> &v) { cout << "{"; for (auto x : v) cout << x << ","; cout << "\b}"; }
+void input(vector<ll>& v) {
+    for (auto& x : v) {
+        cin >> x;
     }
-
-    int operations = 0;
-
-    while (max_heap.size() > 1) {
-        // Get the largest piece
-        int largest_piece = max_heap.top();
-        max_heap.pop();
-
-        if (largest_piece == 1) {
-            break;
-        }
-
-        // Divide the largest piece into two pieces: 1 and largest_piece - 1
-        max_heap.push(1);
-        max_heap.push(largest_piece - 1);
-        operations++;
-
-        // Try to merge the largest piece with the smallest piece (which will always be 1)
-        while (max_heap.size() > 1 && max_heap.top() == 1) {
-            max_heap.pop(); // Remove the 1
-            int next_piece = max_heap.top();
-            max_heap.pop(); // Get the next largest piece
-            int new_piece = next_piece + 1;
-            max_heap.push(new_piece);
-            operations++;
-        }
-    }
-
-    return operations;
 }
+/* UTILS */
+#define MOD 1000000007
+#define PI 3.1415926535897932384626433832795
+#define read(type) readInt<type>()
+ll min(ll a, int b) { if (a < b) return a; return b; }
+ll min(int a, ll b) { if (a < b) return a; return b; }
+ll max(ll a, int b) { if (a > b) return a; return b; }
+ll max(int a, ll b) { if (a > b) return a; return b; }
+ll gcd(ll a, ll b) { if (b == 0) return a; return gcd(b, a % b); }
+ll lcm(ll a, ll b) { return a / gcd(a, b) * b; }
+string to_upper(string a) { for (int i = 0; i < (int)a.size(); ++i) if (a[i] >= 'a' && a[i] <= 'z') a[i] -= 'a' - 'A'; return a; }
+string to_lower(string a) { for (int i = 0; i < (int)a.size(); ++i) if (a[i] >= 'A' && a[i] <= 'Z') a[i] += 'a' - 'A'; return a; }
+bool prime(ll a) { if (a == 1) return 0; for (int i = 2; i <= round(sqrt(a)); ++i) if (a % i == 0) return 0; return 1; }
+void yes() { cout << "YES\n"; }
+void no() { cout << "NO\n"; }
 
-int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+/*  All Required define Pre-Processors and typedef Constants */
+typedef long int int32;
+typedef unsigned long int uint32;
+typedef long long int int64;
+typedef unsigned long long int uint64;
 
-    int t;
+/* clang-format on */
+
+/* Main()  function */
+int main()
+{
+    ios::sync_with_stdio(0); 
+    cin.tie(0);
+    // #ifndef ONLINE_JUDGE
+    // freopen("input.txt", "r", stdin);
+    // #endif
+
+    ll t;
     cin >> t;
-    vector<int> results(t);
-
-    for (int i = 0; i < t; ++i) {
-        int n, k;
+    while (t--)
+    {
+        ll n, k;
         cin >> n >> k;
-        vector<int> pieces(k);
-        for (int j = 0; j < k; ++j) {
-            cin >> pieces[j];
+        vector<ll> vec(k);
+
+        for (ll i = 0; i < k; ++i) {
+            cin >> vec[i]; 
         }
-        results[i] = minimum_operations(n, k, pieces);
-    }
 
-    for (int result : results) {
-        cout << result << endl;
-    }
+        sort(vec.begin(), vec.end());
 
+        ll sum = 0;
+        for (ll i = 0; i < k; ++i) {
+            sum += (2 * vec[i] - 1);
+        }
+
+        cout << sum << endl;
+    }
     return 0;
 }
