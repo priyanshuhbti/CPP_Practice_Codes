@@ -65,18 +65,30 @@ int main()
     // freopen("input.txt", "r", stdin);
     // #endif
 
-    ll t;
-    cin >> t;
-    while (t--)
-    {
+    
+      ll n,k,x;
+      cin>>n>>k;
+      map<ll,ll> m;
+      for(ll i=0; i<n; i++){
+        cin>>x;
+        m[x]=i+1;
+      }
+      if(m.size()<k){
+        no();
 
-        ll n,k ;
-        cin>>n>>k;
-         vector<int> vec(n);
-                for(int i=0; i<n; ++i){
-                    cin>>vec[i];
-                }
+      }
+      else{
+        cout<<"YES"<<endl;
+
+        for(auto t:m){
+            if(k>0){
+                cout<<t.second<<" ";
+                k--;
+
+            }
+        }
+      }
                 
-    }
+    
     return 0;
 }
