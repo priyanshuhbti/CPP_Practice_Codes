@@ -52,20 +52,12 @@ int main()
     // freopen("input.txt", "r", stdin);
     // #endif
     
-    int m, n;
-    int A[5][5];
+   for(int i=0,a; cin>>a; i++){
+    if(a){
+        cout<<abs(2-i/5)+abs(2-i%5);
 
-    for (int i = 0; i < 5; i++) {
-        for (int j = 0; j < 5; j++) {
-            cin >> A[i][j];
-            if (A[i][j] == 1) {
-                m = i;
-                n = j;
-            }
-        }
     }
-    
-    cout << abs(m - 2) + abs(n - 2) << endl;
+   }
 
     return 0;
 }
