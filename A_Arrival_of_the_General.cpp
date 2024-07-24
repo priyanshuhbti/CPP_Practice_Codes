@@ -7,22 +7,20 @@ int main()
     cout.tie(0);cout.sync_with_stdio(0);
     int n;
     cin>>n;
+    int x=0, y=0;
+
      vector<int> vec(n);
             for(int i=0; i<n; ++i){
                 cin>>vec[i];
+                if(vec[i]>vec[x]){
+                    x=i;
+                }else if(vec[i]<=vec[y]){
+                    y=i;
+                }
                 
-    
             }
-int cnt=0;
+          cout<<n-y-1+x-(y<x)<<endl;
 
-     for(int i=0; i<vec.size(); i++ ){
-        if(vec[i]>vec[i+1]){
-            swap(vec[i],vec[i+1]);
-            cnt++;
 
-        }
-     }  
-     cout<<cnt<<endl;
-          
     return 0;
 }
