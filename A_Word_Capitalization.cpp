@@ -5,12 +5,11 @@ int main()
 {
     cin.tie(0);cin.sync_with_stdio(0);
     cout.tie(0);cout.sync_with_stdio(0);
+   string str;
+   cin>>str;
+   str[0]=toupper(str[0]);
+   cout<<str<<endl;
    
-    string st;
-    cin>>st;
-    set<char> str;
-    str.insert(st.begin(),st.end());
-    cout<<((str.size()% 2 == 0) ? "CHAT WITH HER! ": "IGNORE HIM!");
-    
+
     return 0;
 }
