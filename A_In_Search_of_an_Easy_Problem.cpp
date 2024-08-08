@@ -9,7 +9,7 @@ int main()
     int n;
     cin >> n;
     vector<int> vec(n);
-    bool yes = false;  // Initialize the 'yes' variable
+    bool yes = false;  
 
     for (int i = 0; i < n; ++i) {
         cin >> vec[i];
