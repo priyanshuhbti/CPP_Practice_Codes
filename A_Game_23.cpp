@@ -19,7 +19,7 @@ int main()
     m /=n;
 
 
-
+// yhi mistake ho rhi thi...
       while(m % 2 ==0) m /=2 ,ans++ ;
     while(m % 3==0) m /= 3 ,ans++ ;
  
