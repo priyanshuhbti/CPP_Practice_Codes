@@ -9,6 +9,11 @@ int main()
     cin >> t;
     while (t--)
     {
+        //Always try to use the long long instead of the int ..
+        //Long long is always very useful in the point ..
+        //Win11 Notebokk when required and while coding shift to the linux ..
+        //Linux + Codeforces + CSES Problemsets + IIT Kanpur 
+        
         ll a,b,c;
         cin>>a>>b>>c;
         ll f ,s;

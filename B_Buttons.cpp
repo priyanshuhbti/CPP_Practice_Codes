@@ -27,3 +27,7 @@ int main()
     
     return 0;
 }
+
+//Starting mujhe bhi lgta hai ..pagal hai ... but i am also mad for the linux 
+//Now i am a soldier of the Ubuntu LTS 
+//Army of the Arch , Mint ,Debian , Manjaro , Mac ,CentOS ,Amazon OS ..
