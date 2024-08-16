@@ -7,6 +7,10 @@ int main() {
     cin.sync_with_stdio(0);
     cout.tie(0);
     cout.sync_with_stdio(0);
+	//My linux pc will only used for the programming and deep coding stuff ..
+	//It will be never used for learning any ece stuff and doing the small kind of things in the windows 
+	//Linux and ubuntu notebook is only for the coding and deep programming. 
+	//For learning and other stuuff microprocessor stuff and all use the windows 11 notebook for doing that dont use the 
     
     int n;
     cin >> n;
