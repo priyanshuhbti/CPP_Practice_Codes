@@ -1,20 +1,26 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
+using namespace std;
+typedef long long ll;
 
 int main() {
-	std::ios::sync_with_stdio(false);
-	std::cin.tie(nullptr);
-
-	int t;
-	std::cin >> t;
-	std::string s;
-	std::cin >> s;
-	for (int i = 1; i < t; i++) {
-		if (s[i] != s[i - 1]) {
-			std::cout << "YES\n";
-			std::cout << s[i - 1] << s[i];
-			return 0;
-		}
-	}
-	std::cout << "NO";
-	return 0;//
+    cin.tie(0);
+    cin.sync_with_stdio(0);
+    cout.tie(0);
+    cout.sync_with_stdio(0);
+    
+    int n;
+    cin >> n;
+    string s;
+    cin >> s;
+    
+    for (int i = 0; i < n - 1; i++) { 
+        if (s[i] != s[i+1]) {
+            cout << "YES" << endl;
+            cout << s[i] << s[i+1] << endl;
+            return 0;
+        }
+    }
+    
+    cout << "NO" << endl;
+    return 0;
 }
