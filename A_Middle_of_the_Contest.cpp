@@ -1,6 +1,12 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+
+//mehnat krte raho dsa krte raho and codeforces krte raho .. contest dete rho ..
+//chro mt contest kuch 1-2 -3 krte ho ..  dhere dhere ho jaega .. n
+
+/* kaam krne se mtlb hai .. chahe mn kre tou windows se krlo vrna linux use krlo .. dono me set hai  
+*/
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
@@ -22,7 +28,7 @@ int main() {
         cout<<hrs<<":";
         if(min<10)cout<<0;
         cout<<min;
-        
+
     }
 
 
