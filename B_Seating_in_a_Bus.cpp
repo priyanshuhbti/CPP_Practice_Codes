@@ -14,6 +14,8 @@ int main() {
             break;
         }
         cout<<(check?"YES":"NO")<<endl;
+       //Coding in the windows notebook ..
+       //I do not to setup a webserver , i jsut wnat to study from m ynotebook
         //The Server File Commited...
     }
 }
