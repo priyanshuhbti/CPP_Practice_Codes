@@ -23,7 +23,11 @@ int  main()
     
 
       vector<ll> v;
-
+      //Electronics and Communication Enggineering ...
+      //From the Assembly to Computer Architecture => Compilers => VLSI => Backends =>Servers => AI =>Machine Learning =>NLP 
+      //Farzi CS/IT =>DSA and Web Dev ... And YOu as an ECE ..From COmputer Origin to the Advanced COmputing ..
+      //And now you know Linux ..much of the linux for the servers and all also ..
+      
     sort(vec.begin(), vec.end());
     for(ll i=0; i<n; i++){
         days += vec[i].first;
