@@ -1,31 +1,32 @@
 #include <bits/stdc++.h>
 using namespace std;
 typedef long long ll;
-int main()
+
+int  main()
 {
     cin.tie(0);cin.sync_with_stdio(0);
     cout.tie(0);cout.sync_with_stdio(0);
-    int n,k;
+    ll n,k;
     cin>>n>>k;
     
-    vector<pair<int ,int >> vec;
-    int b;
+    vector<pair<ll ,ll >> vec;
+    ll b;
 
-    int cnt=0; 
-    for(int i=0; i<n; i++){
+    ll cnt=0; 
+    for(ll i=0; i<n; i++){
         cin>>b;
 
         vec.push_back({b,i+1});
 
     }
-    int days =k;
+    ll days =0;
     
 
-      vector<int> v;
+      vector<ll> v;
 
     sort(vec.begin(), vec.end());
-    for(int i=0; i<n; i++){
-        days-=vec[i].first;
+    for(ll i=0; i<n; i++){
+        days += vec[i].first;
         if( days <= k){
              cnt++;
              v.push_back(vec[i].second);
