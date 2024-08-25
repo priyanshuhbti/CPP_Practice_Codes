@@ -1,0 +1,28 @@
+#include <bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+int main()
+{
+    cin.tie(0);cin.sync_with_stdio(0);
+    cout.tie(0);cout.sync_with_stdio(0);
+    int t = 1;
+    cin >> t;
+    while (t--)
+    {
+         int n;
+    cin >>n;
+    vector<int> val(n);
+    
+  
+    for(int i = 0; i < n; i++) {
+        cin >> val[i];
+    }
+
+    
+    sort(val.begin(), val.end());
+
+    
+    cout << val[n / 2] << '\n';
+    }
+    return 0;
+}
