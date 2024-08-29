@@ -1,11 +1,15 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void solve() {
-    int n;
-    cin>>n;
-    cout<<(n-1)/2<<endl;
 
+//WIfi is far better than the mobile network ..
+
+void solve() {
+    int a,b;
+    cin>>a>>b;
+    if(a % b ==0) cout<<0<<endl;
+
+    else cout<<b- a % b<<endl;
 
 }
 
@@ -15,8 +19,6 @@ int main() {
 
     int t;
     cin >> t;
-    //Git set ..linux seekh lena .. 
-    //Vs
 
     while (t--) {
         solve();
