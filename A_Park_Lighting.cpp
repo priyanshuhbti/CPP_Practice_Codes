@@ -10,12 +10,13 @@ int main()
     while (t--)
     {
         //Your Maths is pretty poor.
-        
+
         int n,m;
         cin>>n>>m;
         cout<<(n*m +1)/2 <<endl;
 
-        
+     //Linux use kr leta .. but linux ==server  ..buggy .. powersucker and unstable ..
+     //Then use the wind11 Notebook and do your work .. properly ...Become GReat Engineer   
     }
     return 0;
 }

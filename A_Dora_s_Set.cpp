@@ -9,20 +9,13 @@ int main()
     cin >> t;
     while (t--)
     {
-        int l ,r;
-        cin>>l>>r;\
-        int x=l;
+        int l,r;
+        cin>>l>>r;
+ 
+ 
+ cout<<(((r+1)/2 - l/2))/2<<endl;
+ 
 
-        int y=2*l;
-        if(y<=r){
-            cout<<l<<" "<<y<<endl;
-
-        }else{
-            cout<<-1<<" "<<-1<<endl;
-
-
-        }
-        
     }
     return 0;
 }

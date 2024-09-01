@@ -2,6 +2,8 @@
 #include <string>
 using namespace std;
 
+//Dont try to rush over rank .. jsut try to solve the problem .. like you are giving an  OA 
+
 int main() {
     int t;
     cin >> t; // Number of test cases
@@ -13,7 +15,7 @@ int main() {
 
         bool is_good = false;
 
-        // Check if the first and last characters are different
+       
         if (s[0] != s[n - 1]) {
             is_good = true;
         }

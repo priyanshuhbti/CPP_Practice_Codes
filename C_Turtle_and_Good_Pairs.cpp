@@ -19,14 +19,12 @@ int main()
         while(a<=b){
             if(n%2  && a==b){
                 cout<<str[a];
+                
                 break;
             }else{
                 cout<<str[a]<<str[b];
                 a++; b--;
             }
-        
-
-
         }
             cout<<endl;
         

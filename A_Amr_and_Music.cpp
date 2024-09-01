@@ -41,6 +41,7 @@ int  main()
         }
     }
     
+    
     cout<<cnt<<endl;
     for(auto x:v){
         cout<<x<<" ";
