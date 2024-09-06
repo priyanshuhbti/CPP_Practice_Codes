@@ -15,4 +15,5 @@ int main()
 		else cout<<(x+flag)/2<<'\n',flag=-flag;
 	}
 	return 0;
+	
 }
