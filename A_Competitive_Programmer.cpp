@@ -2,37 +2,28 @@
 using namespace std;
 
 void solve() {
-    string str;
-    cin >> str;
+    string s;
+    cin>>s;
+    int zero=0 ,sum=0, even=0;
+    for(auto x:s){
+        if(x=='0')zero++;
+        if((x-'0') % 2==0) even++;
+        sum +=(x-'0');
 
-    // Calculate the sum of the digits
-    int digit_sum = accumulate(str.begin(), str.end(), 0, [](int acc, char c) {
-        return acc + (c - '0'); // Convert char to integer
-    });
-
-    // Check if the sum of digits is divisible by 3
-    if (digit_sum % 3 != 0) {
-        cout << "cyan" << endl;
-        return;
     }
+if(zero ==0){
+    cout<<"cyan"<<endl;
+    return ;
 
-    bool zero = false;
-    bool even = false;
+}
+even--;
+if(sum % 3==0 && even){cout<<"red"<<endl;
+}
+else{
+    cout<<"cyan"<<endl;
 
-    // Check for at least one '0' and one even digit
-    for (char c : str) {
-        if (c == '0') {
-            zero = true;
-        } else if ((c - '0') % 2 == 0) {
-            even = true;
-        }
-    }
+}
 
-    if (zero && even) {
-        cout << "red" << endl;
-    } else {
-        cout << "cyan" << endl;
-    }
 }
 
 int main() {
