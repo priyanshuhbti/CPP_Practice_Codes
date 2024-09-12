@@ -8,9 +8,12 @@ void solve() {
     for(auto x:s){
         if(x=='0')zero++;
         if((x-'0') % 2==0) even++;
-        sum +=(x-'0');
+        sum +=(x-'0')
 
     }
+    //We should commit an issue if possible and try to sort as early as possible .
+    //If we are working on the module ... then try to work on the codes for the it ..
+    
 if(zero ==0){
     cout<<"cyan"<<endl;
     return ;
