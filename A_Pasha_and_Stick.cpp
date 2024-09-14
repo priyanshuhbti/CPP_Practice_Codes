@@ -1,12 +1,17 @@
 #include <bits/stdc++.h>
 using namespace std;
-typedef long long ll;
-int main()
-{
-    cin.tie(0);cin.sync_with_stdio(0);
-    cout.tie(0);cout.sync_with_stdio(0);
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
     int n;
     cin>>n;
-    
+    if(n&1)cout<<0<<endl;
+    else{
+        cout<<(n-1)/4<<endl;
+        
+    }
+
     return 0;
 }
