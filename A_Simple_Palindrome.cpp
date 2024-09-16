@@ -1,29 +1,23 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <string>
 
 using namespace std;
 
-
 int main() {
-    ios_base::sync_with_stdio(0);
-    cin.tie(0);
-    int t = 1;
-    cin >> t;
+    int t;
+    cin >> t; // Read number of test cases
+    string vowels = "aeiou"; // Define the vowels to use
     while (t--) {
-        long long n;
-string vec ="aeiou";
-
-        cin>>n;
-        string str;
+        int n;
+        cin >> n; // Read the size of the string for this test case
         
-        for(int i=0; i<5; i++){
-                for(int j = 0; j < n / 5 + (i < n % 5); j++){
-                        str =str + vec[i];
-
-                }
+        // Create the result string by repeating vowels
+        string result;
+        for (int i = 0; i < n; ++i) {
+            result += vowels[i % 5]; // Use modulo to cycle through vowels
         }
-        cout<<str<<endl;
-
+        
+        cout << result << endl; // Output the generated string
     }
     return 0;
 }
-

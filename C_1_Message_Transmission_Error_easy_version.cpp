@@ -1,22 +1,23 @@
-#include<bits/stdc++.h>
+#include <iostream>
+#include <string>
+
 using namespace std;
-long long n[10],i,m,S,q,l,h=(1LL<<41);
-string s,b("BSC");
-int main()
-{
-	for(cin >>s;i<s.size();i++)
-	{
-		long long z=b.find(s[i]);
-		n[z]++;
-	}
-	for(i=3;i<10;cin >>n[i++]);
-	while(l+1<h)
-	{
-		m=l+h>>1;
-		for(S=i=0;i<3;i++)
-		if((q=n[i]*m-n[3 + i])>0)
-		S+=q*n[6+i];
-		S>n[9]?h=m:l=m;
-	}
-	cout << l;
+
+int main() {
+    string t;
+    cin >> t;
+    int n = t.length();
+
+    // Check for possible values of s
+    for (int s = 1; s < n / 2 + 1; ++s) {
+        // Check if the end of the first part matches the beginning of the second part
+        if (t.substr(0, n - s) == t.substr(s, n - s)) {
+            cout << "YES\n";
+            cout << t.substr(0, n - s) << endl; // Output the original message
+            return 0;
+        }
+    }
+
+    cout << "NO" << endl; // No valid s found
+    return 0;
 }
