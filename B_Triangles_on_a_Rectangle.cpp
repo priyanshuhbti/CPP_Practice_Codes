@@ -22,7 +22,7 @@ void solve() {
 
     }
     cout<<area<<endl;
-    
+
 
 }
 

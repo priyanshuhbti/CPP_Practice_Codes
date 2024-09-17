@@ -1,20 +1,21 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+void solve() {
+    
+    
+}
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    /*
-     COncept is :-
-     Circel concept :- (a+h)2 = a2 +l2;
-     so on solving a = (l2 -h2)/2*h ;
+    int t;
+    cin >> t;
 
-    */
-   double l,h;
-   cin>>h>>l;
-   cout<<fixed <<setprecision(13)<<(l*l -h*h)/(2*h)<<endl;
-   
+    while (t--) {
+        solve();
+    }
 
     return 0;
 }

@@ -12,6 +12,7 @@ int main() {
     res +=(ceil(1.0 * n/a)* ceil(1.0*m/a));
     cout<<res<<endl;
     //Ceil is important and doing alg alg .is also very important ..
+    
         
 
     return 0;
