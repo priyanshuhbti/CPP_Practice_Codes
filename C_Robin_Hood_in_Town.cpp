@@ -14,7 +14,10 @@ int main(){
 			cin>>a[i];
 			s+=a[i];
 		}
+		// sort(a,a+n);
 		sort(a,a+n);
+		//This is the proper code for the code in the reminder..
+		
 		if(n<=2)
 		{
 			cout<<"-1\n";
