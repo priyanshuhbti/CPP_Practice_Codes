@@ -2,8 +2,9 @@
 using namespace std;
 
 void solve() {
-    
-    
+          int a,b,c;
+        cin>>a>>b>>c;
+        cout<<min(b,(a-b)/(c-1))<<endl;
 }
 
 int main() {
