@@ -2,6 +2,11 @@
 using namespace std;
 
 void solve() {
+    int a,b;
+    cin>>a>>b;
+    int c=a;
+    cout<<(c-a)+(b-c)<<endl;
+    
     
 }
 

@@ -32,7 +32,6 @@ void solve() {
     cout << "NO" << endl;
 } else {
     int required = (a + b + c) / 9;
-    // Check if the smallest number is greater than or equal to the required value
     cout << ((min(a, min(b, c)) >= required) ? "YES" : "NO") << endl;
 }
 
