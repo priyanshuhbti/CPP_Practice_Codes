@@ -1,53 +1,15 @@
+#include <bits/stdc++.h>
 using namespace std;
-void solve() {
-
-        int n, q; cin >> n >> q;
-
-        int ans = 0;
-
-        for(int i = 1; i <= n; i++) {
-
-                int x; cin >> x;
-
-                ans = max(ans, x);
-
+typedef long long ll;
+int main()
+{
+        cin.tie(0);cin.sync_with_stdio(0);
+        cout.tie(0);cout.sync_with_stdio(0);
+        int t = 1;
+        cin >> t;
+        while (t--)
+        {
+                
         }
-
-
-        while(q--) {
-
-                char c; int l, r;
-
-                cin >> c >> l >> r;
-
-                if(l <= ans && ans <= r) {
-
-                        if(c == '-') ans--;
-
-                        else ans++;
-
-                }
-
-
-                cout << ans << " ";
-
-        }
-
-        cout << '\n';
-
+        return 0;
 }
-
-
-int main() {
-
-
-        int t; cin >> t;
-
-        while(t--) {
-
-                solve();
-
-        }
-
-}
-B
