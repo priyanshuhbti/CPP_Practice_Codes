@@ -4,7 +4,7 @@ using namespace std;
 void solve() {
           int a,b,c;
         cin>>a>>b>>c;
-        cout<<min(b,(a-b)/(c-1))<<endl;
+        cout<<min(b,(a-b)/(c-1))<<endl;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
 }
 
 int main() {
@@ -12,6 +12,7 @@ int main() {
     cin.tie(nullptr);
 
     int t;
+    
     cin >> t;
 
     while (t--) {

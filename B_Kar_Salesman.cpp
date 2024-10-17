@@ -18,6 +18,7 @@ void solve() {
     cout << max(mx, (sum + x - 1LL) / x) << endl;
 }
 
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);

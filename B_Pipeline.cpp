@@ -12,10 +12,9 @@ int main() {
     
     ll n, k;
     cin >> n >> k;
-    n -= 1;  // Reduce n by 1 to account for the starting position
-    ll s = sum(k - 1);  // Sum of numbers from 1 to k-1
+    n -= 1;  
+    ll s = sum(k - 1); 
     
-    // If the total sum from 1 to k-1 is less than n, it's impossible
     if (s < n) {
         cout << -1 << endl;
     } else {
@@ -28,7 +27,6 @@ int main() {
                 h = mid - 1;
             }
         }
-        // After the binary search, h will give us the correct answer
         cout << k - 1 - h << endl;
     }
 

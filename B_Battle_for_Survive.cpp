@@ -23,6 +23,7 @@ int main() {
             }
         }
 
+
         // The total damage done to the last remaining fighter
         long long sum_other_ratings = total_sum - max_rating;
 

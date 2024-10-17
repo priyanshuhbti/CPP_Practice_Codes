@@ -17,6 +17,7 @@ int main() {
     ll n;
     cin >> n;
     
+    
     ll low = 0, high = 1e18; 
     ll ans = -1;
     

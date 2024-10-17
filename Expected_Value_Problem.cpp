@@ -33,6 +33,7 @@ int main() {
         // Output the final position of Sushil (1-based index)
         cout << sushilPosition + 1 << endl; // Convert to 1-based index
     }
+    
 
     return 0;
 }
