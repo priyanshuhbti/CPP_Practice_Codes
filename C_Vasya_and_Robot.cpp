@@ -57,13 +57,14 @@ int main()
     // freopen("input.txt", "r", stdin);
     // #endif
 
-   ll t;
-cin >> t;
-while (t--)
-{
-    
-    
-}
+int n;
+cin>>n;
+string str;
+cin>>str;
+int x,y;
+cin>>x>>y;
+
+
 
     return 0;
 }

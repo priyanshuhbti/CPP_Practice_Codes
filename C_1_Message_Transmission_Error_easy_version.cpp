@@ -1,23 +1,17 @@
-#include <iostream>
-#include <string>
-
+#include<bits/stdc++.h>
 using namespace std;
-
-int main() {
-    string t;
-    cin >> t;
-    int n = t.length();
-
-    // Check for possible values of s
-    for (int s = 1; s < n / 2 + 1; ++s) {
-        // Check if the end of the first part matches the beginning of the second part
-        if (t.substr(0, n - s) == t.substr(s, n - s)) {
-            cout << "YES\n";
-            cout << t.substr(0, n - s) << endl; // Output the original message
-            return 0;
-        }
-    }
-
-    cout << "NO" << endl; // No valid s found
+int main(){
+	string s;cin>>s;
+	int i=0,j=1;
+	while(j<s.length()){
+		if(s[i]==s[j]){i++,j++;}
+		else {j-=i-1;i=0;}
+	}
+	if(i>j-i){
+		cout<<"YES"<<endl;
+		cout<<s.substr(0,i)<<endl;
+	}
+	else cout<<"NO"<<endl;
     return 0;
+    
 }

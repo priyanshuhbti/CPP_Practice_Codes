@@ -9,6 +9,7 @@ void solve() {
      k *= cf;
      cout<<(k+n-1)/n <<endl;
      
+     
 }
 
 int main() {
