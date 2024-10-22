@@ -9,6 +9,7 @@ return 0;
 // then ok good .. go for it .. and do dsa ..
 //Windows 11  Norebook is also setuped for doing it ..
 //Linux is setupped for learningn dSA jsut learn dsa..
+cout<<"Hello World"<<endl;
 
 
 }

@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+      
 /* OM NAMO NARAYANA */
 /* Code written by Priyanshu Yadav  */
 
@@ -35,50 +35,47 @@ ll max(ll a, int b) { if (a > b) return a; return b; }
 ll max(int a, ll b) { if (a > b) return a; return b; }
 ll gcd(ll a, ll b) { if (b == 0) return a; return gcd(b, a % b); }
 ll lcm(ll a, ll b) { return a / gcd(a, b) * b; }
-string to_upper(string a) { for (int i = 0; i < (int)a.size(); ++i) if (a[i] >= 'a' && 'z' >= a[i]) a[i] -= 'a' - 'A'; return a; }
-string to_lower(string a) { for (int i = 0; i < (int)a.size(); ++i) if (a[i] >= 'A' && 'Z' >= a[i]) a[i] += 'a' - 'A'; return a; }
+string to_upper(string a) { for (int i = 0; i < (int)a.size(); ++i) if (a[i] >= 'a' && a[i] <= 'z') a[i] -= 'a' - 'A'; return a; }
+string to_lower(string a) { for (int i = 0; i < (int)a.size(); ++i) if (a[i] >= 'A' && a[i] <= 'Z') a[i] += 'a' - 'A'; return a; }
 bool prime(ll a) { if (a == 1) return 0; for (int i = 2; i <= round(sqrt(a)); ++i) if (a % i == 0) return 0; return 1; }
 void yes() { cout << "YES\n"; }
 void no() { cout << "NO\n"; }
 
-/* All Required define Pre-Processors and typedef Constants */
+/*  All Required define Pre-Processors and typedef Constants */
 typedef long int int32;
 typedef unsigned long int uint32;
 typedef long long int int64;
 typedef unsigned long long int uint64;
+string s[5000];
+
+/* clang-format on */
 
 /* Main()  function */
 int main()
 {
+
     // #ifndef ONLINE_JUDGE
     // freopen("input.txt", "r", stdin);
-    // freopen("output.txt", "w", stdout);
     // #endif
 
-    ll t;
-    cin >> t;
-    while (t--)
-    {
-        ll n, sum = 0;
-        cin >> n;
+   ll t;
+cin >> t;
+while (t--)
+{
 
-        vector<ll> vec(n); // Resize the vector to hold n elements
-        for (int i = 0; i < n; i++)
-        {
-            cin >> vec[i];
-            if (i & 1)
-            {
-                sum -= vec[i];
-            }
-            else
-            {
-                sum += vec[i];
-            }
-        }
-
-        // Output the result (if needed)
-        cout << sum << endl;
-    }
+int n;
+	cin>>n;
+	for(int i=1;i<=n;i++){
+		cin>>s[i];}
+	for(int i=n;i>=1;i--){
+		cout<<s[i].find("#")+1<< " ";}
+     cout<<endl;
+     
+    
+    
+}
 
     return 0;
 }
+
+
