@@ -1,39 +1,44 @@
-#include <iostream>
-#include <string>
+#include <bits/stdc++.h>
 using namespace std;
+#define ll long long
 
-int main() {
-    int t;
-    cin >> t;
-
-    while (t--) {
-        int n;
-        cin >> n;
-
-        string password = ""; // We'll build the password character by character
-
-        for (int i = 0; i < n; ++i) {
-            // Create a test string by appending '0' to the current guessed password
-            string test0 = password + '0';
-            cout << "? " << test0 << endl;
-            cout.flush();
-            int response0;
-            cin >> response0;
-
-            if (response0 == 1) {
-                // '0' is the correct character at this position
-                password += '0';
-            } else {
-                // If '0' is not a correct substring, it must be '1'
-                password += '1';
-            }
-        }
-
-        // Output the guessed password
-        cout << "! " << password << endl;
-        cout.flush();
-    }
-
-    return 0;
+int guess(string s) {
+	cout << "? " << s << endl;
+	int a;
+	cin >> a;
+	return a;
 }
 
+//Interactive Problem :- Medium Level Codeforces
+
+
+int main() {
+	ios::sync_with_stdio(0);
+	cin.tie(0);
+
+	int t;
+	cin >> t;
+	while (t--) {
+		int n;
+		cin >> n;
+		string s;
+		bool ok = 0;
+		for (int i = 0; i < n; i++) {
+			if (!ok) {
+				if (guess(s + "0"))
+					s += "0";
+				else if (guess(s + "1"))
+					s += "1";
+				else
+					ok = 1;
+			}
+			if (ok) {
+				if (guess("0" + s))
+					s = "0" + s;
+				else
+					s = "1" + s;
+			}
+		}
+		cout << "! " << s << endl;
+	}
+}
