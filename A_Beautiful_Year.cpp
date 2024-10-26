@@ -48,7 +48,7 @@ typedef long long int int64;
 typedef unsigned long long int uint64;
 
 /* clang-format on */
-int t,n;long long a[200001];
+
 /* Main()  function */
 int main()
 {
@@ -57,17 +57,36 @@ int main()
     // freopen("input.txt", "r", stdin);
     // #endif
 
-   ll t;
-cin >> t;
-while (t--)
-{
-    
-  		cin>>n;
-		for(int i=1;i<=n;i++)cin>>a[i];
-		for(int i=1;i<n-1;i++)a[n-1]-=a[i];
-		cout<<a[n]-a[n-1]<<'\n';
-    
+int n;
+cin>>n;
+while(true){
+    n++;
+
+set <char> digits;
+string yearStr = to_string(n);
+bool val=true;
+
+for(char a:yearStr){
+    if(digits.count(a)>0){
+         val=false;
+        break;
+       
+
+    }else{
+        digits.insert(a);  
+    }
+}
+
+ if(val){
+    cout<<n<<endl;
+    break;
+
+ }
+
+
 }
 
     return 0;
 }
+
+
