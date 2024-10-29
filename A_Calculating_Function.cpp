@@ -56,12 +56,13 @@ int main()
     // #ifndef ONLINE_JUDGE
     // freopen("input.txt", "r", stdin);
     // #endif
+//Instead of int always use ll
 
- int n;
+ ll n;
  cin>>n;
  if(n%2 ==0)cout<< n/2<<endl;
  else{
-    cout<<(n-1)/2-n<<endl;
+    cout<<(n-1)/2 - n<<endl;
 
  }
 
