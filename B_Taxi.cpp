@@ -68,7 +68,7 @@ int main()
     int a[5] = {0};
     int n, t;
     cin >> n;
-    for (int i = 0; i < n; i++) {
+
         cin >> t;
         a[t]++;
     }
