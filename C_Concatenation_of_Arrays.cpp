@@ -1,79 +1,65 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-/* OM NAMO NARAYANA */
-/* Code written by Priyanshu Yadav  */
-
-/* TYPES  */
+const int MOD = 1e9 + 7;
 #define ll long long
-#define pii pair<int, int>
-#define vi vector<int>
 
-/* FUNCTIONS */
-#define f(i, start, end) for (long long int i = start; i < end; i++)
-
-/* Utility function to read pairs and values */
-void readPairs(ll numPairs, vector<pii>& pairs, vi& values) {
-    f(i, 0, numPairs) {
-        cin >> pairs[i].first >> pairs[i].second; // Read pairs
-        values[2 * i] = pairs[i].first; // Store first element
-        values[2 * i + 1] = pairs[i].second; // Store second element
-    }
-}
-
-/* Function to compress values */
-void compressValues(const vi& values, map<ll, ll>& valueMap, ll& currentIndex) {
-    for (ll value : values) {
-        if (valueMap.find(value) == valueMap.end()) {
-            valueMap[value] = currentIndex++; // Assign index to unique value
-        }
-    }
-}
-
-/* Function to prepare the result */
-vector<array<ll, 3>> prepareResult(const vector<pii>& pairs, const map<ll, ll>& valueMap, ll numPairs) {
-    vector<array<ll, 3>> results(numPairs);
-    f(i, 0, numPairs) {
-        results[i][0] = valueMap.at(pairs[i].first) + valueMap.at(pairs[i].second); // Calculate sum
-        results[i][1] = pairs[i].first; // Store original first value
-        results[i][2] = pairs[i].second; // Store original second value
-    }
-    return results;
-}
-
-/* Main function to execute the program */
 signed main() {
-    ll totalTestCases; 
-    cin >> totalTestCases; // Read number of test cases
+    ll testCases; 
+    cin >> testCases;
 
-    while (totalTestCases--) {
-        ll numberOfPairs; 
-        cin >> numberOfPairs; // Read number of pairs
+    while (testCases--) {
+        ll numPairs; 
+        cin >> numPairs;
 
-        vector<pii> pairList(numberOfPairs);
-        vi valueList(2 * numberOfPairs);
-        
-        readPairs(numberOfPairs, pairList, valueList); // Read pairs
+        // Define vectors for pairs and values
+        vector<pair<ll, ll>> pairs(numPairs);
+        vector<ll> values(2 * numPairs);
 
-        sort(valueList.begin(), valueList.end()); // Sort values
-        map<ll, ll> uniqueValueMap; 
-        ll currentIndex = 1;
+        // Input pairs and store values
+        for (ll i = 0; i < numPairs; ++i) {
+            cin >> pairs[i].first >> pairs[i].second;
+            values[2 * i] = pairs[i].first;
+            values[2 * i + 1] = pairs[i].second;
+        }
 
-        compressValues(valueList, uniqueValueMap, currentIndex); // Compress values
+        // Sort the values array
+        sort(values.begin(), values.end());
+        map<ll, ll> valueMap;
+        vector<ll> compressed(numPairs * 2);
 
-        auto results = prepareResult(pairList, uniqueValueMap, numberOfPairs); // Prepare results
+        // Map unique values to indices
+        ll index = 1;
+        for (ll i = 0; i < 2 * numPairs; i++) {
+            if (valueMap.find(values[i]) == valueMap.end()) {
+                valueMap[values[i]] = index++;
+            }
+        }
 
-        // Sort the result array based on the sum of pairs
-        sort(results.begin(), results.end(), [](const array<ll, 3>& a, const array<ll, 3>& b) {
-            return a[0] < b[0]; // Compare based on the first element
+        // Compress the pairs
+        for (ll i = 0; i < numPairs; ++i) {
+            compressed[i * 2] = valueMap[pairs[i].first];
+            compressed[i * 2 + 1] = valueMap[pairs[i].second];
+        }
+
+        // Prepare the result array
+        vector<array<ll, 3>> result(numPairs);
+        for (ll i = 0; i < numPairs; ++i) {
+            ll sum = compressed[i * 2] + compressed[i * 2 + 1];
+            result[i] = {sum, pairs[i].first, pairs[i].second};
+        }
+
+        // Sort the result array based on the first column
+        sort(result.begin(), result.end(), [](const array<ll, 3>& a, const array<ll, 3>& b) {
+            return a[0] < b[0];
         });
 
-        // Output the results for each pair
-        f(i, 0, numberOfPairs) {
-            cout << results[i][1] << " " << results[i][2] << " "; // Print original pairs
+        // Output the results
+        for (ll i = 0; i < numPairs; ++i) {
+            cout << result[i][1] << " " << result[i][2] << " ";
         }
-        cout << endl; // New line after each test case output
+        cout << endl;
     }
 
-    return 0; // Indicate successful completion of the program
+    return 0;
 }

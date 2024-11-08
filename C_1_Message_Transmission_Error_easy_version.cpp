@@ -12,6 +12,4 @@ int main(){
 		cout<<s.substr(0,i)<<endl;
 	}
 	else cout<<"NO"<<endl;
-    return 0;
-    
 }
