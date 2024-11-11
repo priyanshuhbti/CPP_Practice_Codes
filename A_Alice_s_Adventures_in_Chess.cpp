@@ -24,10 +24,10 @@ void solve() {
             } else {
                 x--;
             }
-            if (x == a && y == b) {
-                std::cout << "YES\n";
-                return;
-            }
+            // if (x == a && y == b) {
+            //     std::cout << "YES\n";
+            //     return;
+            // }
         }
     }
     std::cout << "NO\n";
