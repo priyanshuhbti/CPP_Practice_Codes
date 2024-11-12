@@ -56,21 +56,15 @@ int main()
     // #ifndef ONLINE_JUDGE
     // freopen("input.txt", "r", stdin);
     // #endif
+string str;
+cin>>str;
+// for(int i=0; i<str.length(); i++){
+//     if(str[i] = )
 
- 
-    
-    int n;
-
-cin>>n;
-int a[n];
-for(int i=0;i<n;i++){
-cin>>a[i];
-}
-sort(a,a+n);
-for(int i=0;i<n;i++){
-cout<<a[i]<<" ";
-    
-}
+// }
+string str;
+cin>>str;
+ cout<< regex_replace(str,regex("WUB")," ");
 
     return 0;
 }
