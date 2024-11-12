@@ -61,13 +61,6 @@ int main()
 cin >> t;
 while (t--)
 {
-     long long l, r, k;
-        cin >> l >> r >> k; 
-
- //Itta aasan ques.. fuck ho gya !!
-           
-    int ans = max(0, r / k - l + 1);
-    cout << ans << "\n";
     
     
 }

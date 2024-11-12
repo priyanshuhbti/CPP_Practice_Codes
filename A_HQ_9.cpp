@@ -57,16 +57,28 @@ int main()
     // freopen("input.txt", "r", stdin);
     // #endif
 
-   ll t;
-cin >> t;
-while (t--)
-{
-    
-    
-    
-}
+ string str;
+ cin>>str;
+//   if (str.find('H') != string::npos || 
+//         str.find('Q') != string::npos || 
+//         str.find('9') != string::npos || 
+//         str.find('+') != string::npos) {
+//         cout << "YES" << endl;
+//     } else {
+//         cout << "NO" << endl;
+//     }
+int ans=0;
+
+ for(int i=0; i<str.size(); i++ ){
+    if(str[i]=='H' || str[i]=='Q'|| str[i]=='9'){
+        ans =1;
+
+    }
+ }
+ 
+ if(ans==1)cout<<"YES"<<endl;
+ else cout<<"NO"<<endl;
+ 
 
     return 0;
 }
-
-

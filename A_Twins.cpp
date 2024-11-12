@@ -58,7 +58,6 @@ int main()
     // #endif
    
 
-   //Khudse try krna and khudse code likhna is very imp.. bro ...
 
    ll n;
    cin>>n;
