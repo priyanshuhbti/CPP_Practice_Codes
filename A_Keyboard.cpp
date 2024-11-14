@@ -56,9 +56,33 @@ int main()
     // #ifndef ONLINE_JUDGE
     // freopen("input.txt", "r", stdin);
     // #endif
+ int x=0;
+ char c;
 
-   ll n,m;
-   cin>>n>>m;
-  cout<<(n*m-1)/(m-1)<<endl;
+
+ cin>>c;
+ string str;
+ cin>>str;
+ string ss;
+ss="qwertyuiopasdfghjkl;zxcvbnm,./";
+ if(c=='L') x=1 ;
+ else x=-1;
+
+
+//JB main depressed tha.. tb mera saath ksisine nhi diya ...
+//So i will also not help anybody ... if got successs..
+
+ for(int i=0; i<str.size(); i++){
+    for(int j=0; j<30; j++){
+        if(str[i]==ss[j]){
+            cout<<ss[j+x];
+            break;
+
+        }
+    }
+ }
+
     return 0;
 }
+
+
