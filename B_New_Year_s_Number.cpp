@@ -57,21 +57,17 @@ int main()
     // freopen("input.txt", "r", stdin);
     // #endif
 
-
-
-int n,m;
-cin>>n>>m;
-int p=min(n,m);
-if(p&1){
-     cout<<"Akshat"<<endl;
-
+   ll t;
+cin >> t;
+while (t--)
+{
+    int x;
+    cin>>x;
+    //To check if a no. is sum of two :- use modular arithmetic 
+    cout << (x % 2020 > x / 2020 ? "NO" : "YES") << endl;
+    
+    
 }
-else{
-  
-     cout<<"Malvika"<<endl;
-
-}
-
 
     return 0;
 }

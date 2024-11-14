@@ -57,22 +57,14 @@ int main()
     // freopen("input.txt", "r", stdin);
     // #endif
 
-
-
-int n,m;
-cin>>n>>m;
-int p=min(n,m);
-if(p&1){
-     cout<<"Akshat"<<endl;
-
-}
+   ll n;
+   cin>>n;
+   if(n>=0){
+cout<<n<<endl;}
 else{
-  
-     cout<<"Malvika"<<endl;
-
-}
-
-
+int a= n/10;
+int b= n/100 *10 + n % 10;
+cout<< max(a,b) <<endl;}
     return 0;
 }
 

@@ -28,6 +28,7 @@ void print_v(vector<T> &v) { cout << "{"; for (auto x : v) cout << x << ","; cou
 /* UTILS */
 #define MOD 1000000007
 #define PI 3.1415926535897932384626433832795
+#define k(a) for(int i=0;i<a;i++)
 #define read(type) readInt<type>()
 ll min(ll a, int b) { if (a < b) return a; return b; }
 ll min(int a, ll b) { if (a < b) return a; return b; }
@@ -57,21 +58,12 @@ int main()
     // freopen("input.txt", "r", stdin);
     // #endif
 
-
-
-int n,m;
-cin>>n>>m;
-int p=min(n,m);
-if(p&1){
-     cout<<"Akshat"<<endl;
-
-}
-else{
-  
-     cout<<"Malvika"<<endl;
-
-}
-
+ int a,c,n=0,b[100];
+cin>>a>>c;
+k(a)cin>>b[i];
+sort(b,b+a);
+k(c){b[i]<0?n-=b[i]:a;}
+cout<<n;
 
     return 0;
 }

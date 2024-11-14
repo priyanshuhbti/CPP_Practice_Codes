@@ -57,21 +57,21 @@ int main()
     // freopen("input.txt", "r", stdin);
     // #endif
 
+   ll t;
+cin >> t;
+while (t--)
+{
+    //Upcoming SWE @ Adobe 
+ ll n;
+ cin>>n;
+ ll moves=0;
+ while(n %6 ==0) {n=n/6; moves++;}
+ while(n %3==0){ n=n/3;  moves =moves+2;} 
+ if(n==1) cout<<moves<<endl;
+ else cout<<"-1"<<endl;
 
-
-int n,m;
-cin>>n>>m;
-int p=min(n,m);
-if(p&1){
-     cout<<"Akshat"<<endl;
-
+    
 }
-else{
-  
-     cout<<"Malvika"<<endl;
-
-}
-
 
     return 0;
 }

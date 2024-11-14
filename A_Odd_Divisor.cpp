@@ -57,21 +57,23 @@ int main()
     // freopen("input.txt", "r", stdin);
     // #endif
 
+   ll t;
+cin >> t;
+while (t--)
+{
+ ll n;
+ //Please use the ll everywhere ..
+ 
+ cin>>n;
+ if(n &(n-1)){
+    cout<<"YES"<<endl;
 
-
-int n,m;
-cin>>n>>m;
-int p=min(n,m);
-if(p&1){
-     cout<<"Akshat"<<endl;
-
+ }  else{
+    cout<<"NO"<<endl;
+    
+ }  
+    
 }
-else{
-  
-     cout<<"Malvika"<<endl;
-
-}
-
 
     return 0;
 }
