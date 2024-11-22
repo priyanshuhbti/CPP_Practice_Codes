@@ -57,19 +57,28 @@ int main()
     // freopen("input.txt", "r", stdin);
     // #endif
 
+   ll t;
+cin >> t;
+while (t--)
+{
+    int n;
+    cin>>n;
+    vll a(n);
+    for(int i=0; i<n; i++){
+        cin>>a[i];
 
-int n;
-cin>>n;
-vector<string > a(n);
-for(int i=0; i<n; i++){
-    cin>>a[i];
+    }
+    map<ll ,int>  f;//Hashmap
+    ll nas=0;
 
+    for(int i = n - 1; i >= 0; i--){
+        nas += f[a[i]-i];
+        f[a[i] - i]++;
+    }
+
+    cout<<nas<<endl;
+    
 }
-
-sort(a.begin(), a.end());
-cout<<a[n/2]<<endl;
-
-
 
     return 0;
 }

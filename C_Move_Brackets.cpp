@@ -57,19 +57,36 @@ int main()
     // freopen("input.txt", "r", stdin);
     // #endif
 
-
+   ll t;
+cin >> t;
+while (t--)
+{
 int n;
 cin>>n;
-vector<string > a(n);
+
+
+
+string s;
+cin>>s;
+
+int mn=0, b=0;
 for(int i=0; i<n; i++){
-    cin>>a[i];
+    if(s[i]== '('){
+        ++b;
+
+    }else{
+        --b;
+
+    }
+
+    mn=min(mn,b);
 
 }
-
-sort(a.begin(), a.end());
-cout<<a[n/2]<<endl;
+cout<<-mn<<endl;
 
 
+
+}
 
     return 0;
 }

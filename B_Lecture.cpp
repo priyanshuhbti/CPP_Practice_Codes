@@ -56,22 +56,28 @@ int main()
     // #ifndef ONLINE_JUDGE
     // freopen("input.txt", "r", stdin);
     // #endif
-
-
-int n;
-cin>>n;
-vector<string > a(n);
-for(int i=0; i<n; i++){
-    cin>>a[i];
-
-}
-
-sort(a.begin(), a.end());
-cout<<a[n/2]<<endl;
-
-
+    int n,m;
+    cin>>n>>m;
+    map<string,string> ms;
+    string x,y;
+    for(int i=0;i<m;i++)
+    {
+       cin>>x>>y;
+       if(x.length()>y.length())
+       {
+           ms[x]=y;
+       }
+       else
+       {
+           ms[x]=x;
+       }
+    }
+    string s;
+    for(int i=0;i<n;i++)
+    {
+        cin>>s;
+        cout<<ms[s]<<" ";
+    }
 
     return 0;
 }
-
-

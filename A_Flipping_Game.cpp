@@ -58,20 +58,47 @@ int main()
     // #endif
 
 
+
+//Please try to write , clean and clear code ..
+//It will help you to read and understand the code easily..
+
 int n;
-cin>>n;
-vector<string > a(n);
-for(int i=0; i<n; i++){
-    cin>>a[i];
+int a[200], b[200] ,ans=0;
 
-}
+cin >>n;
 
-sort(a.begin(), a.end());
-cout<<a[n/2]<<endl;
+ for (int i = 0; i < n; i++) {
+        cin >> a[i];
+    }
 
 
+//Bruteforce approach lgao .. as n=100 only ...
+    for (int i = 0; i < n; ++i) {
+        for (int j = i; j < n; ++j) { 
+            int nas = 0;
 
+            
+            for (int x = 0; x < n; x++) {
+                b[x] = a[x];
+            }
+
+            
+            for (int x = i; x <= j; ++x) {
+                b[x] = 1 - b[x];
+            }
+
+            for (int x = 0; x < n; ++x) { 
+                if (b[x]) nas++;
+            }
+
+            if (nas > ans) ans = nas;
+        }
+    }
+
+    cout << ans << endl;
     return 0;
+
+
 }
 
 

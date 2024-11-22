@@ -57,19 +57,32 @@ int main()
     // freopen("input.txt", "r", stdin);
     // #endif
 
-
-int n;
-cin>>n;
-vector<string > a(n);
-for(int i=0; i<n; i++){
-    cin>>a[i];
-
+   ll t;
+cin >> t;
+while (t--)
+{
+              ll n;
+          cin>>n;
+          ll ar[n];
+          for(ll i=0;i<n;i++)
+          cin>>ar[i];
+          long long sum=0;
+          for(ll i=0;i<n;i++)
+          {
+                ll j=i;
+                ll cur=-100000000000;
+                while(j<n && ar[i]*ar[j]>0)
+                {
+                      cur=std::max(cur,ar[j]);
+                      j++;
+                }
+                sum=sum+cur;
+                i=j-1;
+          }
+          cout<<sum<<endl;
+    
+    
 }
-
-sort(a.begin(), a.end());
-cout<<a[n/2]<<endl;
-
-
 
     return 0;
 }
