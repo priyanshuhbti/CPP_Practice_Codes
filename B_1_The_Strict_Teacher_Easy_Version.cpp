@@ -1,16 +1,34 @@
-#include <iostream>
-#include <algorithm>
+#include<bits/stdc++.h>
 using namespace std;
-
-int main() {
+int main()
+{
     int t;
     cin >> t;
-    while (t--) {
-        int n, d, t1, t2;
-        cin >> n >> d >> t1 >> t2;
-        int dist1 = abs(d - t1);
-        int dist2 = abs(d - t2);
-        cout << min(dist1, dist2) << endl;
+    while(t--)
+    {
+        int n, m, q;
+        cin >> n >> m >> q;
+        int t1, t2;
+        cin >> t1 >> t2;
+        int d;
+        cin >> d;
+
+        int ans;
+        if(d==t1 || d==t2)
+        ans = 0;
+        else if(d < t1 && d < t2)
+        {
+            ans = min(t1, t2) - 1;
+        }
+        else if(d > t1 && d > t2)
+        {
+            ans = n - max(t1, t2);
+        }
+        else
+        {
+            ans = min( abs(t1 - (t1+t2)/2) , abs(t2 - (t1+t2)/2)); 
+        }
+
+        cout << ans << endl;
     }
-    return 0;
 }
