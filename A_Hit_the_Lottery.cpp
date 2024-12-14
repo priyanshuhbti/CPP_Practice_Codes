@@ -1,10 +1,10 @@
 /* ॐ श्री वेंकटेश्वराये नमो नमः */ 
-/* श्रीमन नारायण नमो नमः */
+
 
 #include <bits/stdc++.h>
 using namespace std;
 
-/* Code written by Priyanshu Yadav IIT Kanpur  */
+
 
 /* TYPES  */
 #define ll long long

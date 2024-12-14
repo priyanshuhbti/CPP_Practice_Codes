@@ -1,8 +1,9 @@
 /* ॐ श्री वेंकटेश्वराये नमो नमः */ 
-
+/* श्रीमन नारायण नमो नमः */
 
 #include <bits/stdc++.h>
 using namespace std;
+
 
 /* TYPES  */
 #define ll long long
@@ -17,7 +18,6 @@ using namespace std;
 /* FUNCTIONS */
 #define f(i, s, e) for (long long int i = s; i < e; i++)
 #define cf(i, s, e) for (long long int i = s; i <= e; i++)
-
 #define rf(i, e, s) for (long long int i = e - 1; i >= s; i--)
 #define pb push_back
 #define eb emplace_back
@@ -68,20 +68,19 @@ int main()
     cin >> t;
     while (t--)
     {
-
-        int n;
-    cin >> n;
-    vector<int> a(n);
-    for (int i = 0; i < n; i++) cin >> a[i];
-    int sum = 0;
-    int ans = 0;
+         ll n, m;
+    cin >> n >> m;
+    vector<string>a(n);
     for (int i = 0; i < n; i++) {
-        sum += a[i];
-        int p = sqrtl(sum);
-        if (p * p == sum && p % 2 != 0) ans++;
+        cin >> a[i];
     }
-    cout << ans << endl;
-
+    ll cnt = 0;
+    for (int i = 0; i < n; i++) {
+        m -= a[i].size();
+        if (m < 0) break;
+        cnt++;
+    }
+    cout << cnt << "\n";
     }
     return 0;
 }

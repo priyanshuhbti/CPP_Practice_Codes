@@ -68,6 +68,8 @@ void solve() {
             }
         }
     }
+
+
     if (q == -1) q = p;
     char pp = char('a' + p);
     char qq = char('a' + q);
