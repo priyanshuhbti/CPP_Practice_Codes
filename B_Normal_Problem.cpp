@@ -65,10 +65,12 @@ while (t--)
     string str;
     cin>>str;
     reverse(str.begin(), str.end());
-    for(int i=0; i<str.length(); i++){
-        if(str.length)
-    }
-    
+    	for(auto &c: str){
+		if(c == 'q')c = 'p';
+		else if(c == 'p')c = 'q';
+	}
+    cout<<str<<endl;
+
 }
 
     return 0;
