@@ -57,42 +57,14 @@ int main()
     // freopen("input.txt", "r", stdin);
     // #endif
 
- 
-    ll n;
-    cin>>n;
-    vll v(n,0);
-    vll prefix(n+1,0);
-    for(int i=0; i<n; i++){
-        cin>>v[i];
-        prefix[i+1] = prefix[i]+ v[i];
+ ll n,k;
+ cin>>n>>k;
+ vll a(n+1);
 
-    }
-    sort(v.begin(), v.end());
-    vll prefix2(n+1,0 );
-    for(int i=0; i<n ; i++){
-        prefix2[i+1] = prefix2[i]+ v[i];
-
-    }
-
-    int m;
-    cin>>m;
-    while (m--)
-    {
-        int type;
-        cin>>type;
-        ll l,r;
-        cin>>l>>r;
-        cout<<(type==1 ? prefix[r]-prefix[l-1]:prefix2[r]- prefix2[l-1])<<endl;
-        
-    }
-    
-
-
-   
-
-
-
-
+     a[0]=1;
+    for(int i=1;i<=n;i++)cin>>a[i];
+    sort(a.begin(),a.end());
+    cout<<(k==n||a[k+1]-a[k]?a[k]:-1);
     return 0;
 }
 
