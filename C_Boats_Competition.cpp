@@ -49,12 +49,6 @@ typedef unsigned long long int uint64;
 
 /* clang-format on */
 
-
-long long coprime_pairs(int n){
-    return(long long ) n* (n-1)/2;
-
-}
-
 /* Main()  function */
 int main()
 {
@@ -63,28 +57,41 @@ int main()
     // freopen("input.txt", "r", stdin);
     // #endif
 
-   ll t;
-cin >> t;
-while (t--)
-{
-    
-    ll n,k;
-    cin>>n>>k;
-  long long maxcoprime = (n * (n-1))/2;
-  if(k>maxcoprime || k>0){
-    return 0;
-
-  }
-  vll arr(n);
-  vll prime ={2,3,5,7,11,13,17,19,23,29};
-
-  
-  
-
+ll t;
+cin>>t;
+while(t--){
+    ll n=0;
+cin>>n;
+vll v(n);
+vll h(n+1,0);
+for(int i=0; i<n; i++){
+    cin>>v[i];
+    h[v[i]]++;
 
 }
 
-    return 0;   
+vll sum(102,0);
+for(int i=0; i<n+1; i++){
+    for(int j=i; j<=n; j++){// yha mistkae kr rha tha j<=
+        if(i==j){//Sum calculate kr rhe hain..
+
+            sum[i+j] +=h[i]/2;
+
+        }else{
+            sum[i+j] += min(h[i],h[j]);
+            //agar different hua then minimum..
+
+        }
+    }
+    
+}
+cout<<*max_element(sum.begin(), sum.end())<<endl;
+
+}
+
+
+
+    return 0;
 }
 
 

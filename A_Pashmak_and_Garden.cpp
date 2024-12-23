@@ -57,6 +57,7 @@ int main()
     // freopen("input.txt", "r", stdin);
     // #endif
 
+//Easy peasy bss sq check size x2-x1 =a dekh le .. copy pen
 
   int x1, y1, x2, y2;
   cin >> x1 >> y1 >> x2 >> y2;

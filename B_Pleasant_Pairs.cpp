@@ -48,13 +48,26 @@ typedef long long int int64;
 typedef unsigned long long int uint64;
 
 /* clang-format on */
-
-
-long long coprime_pairs(int n){
-    return(long long ) n* (n-1)/2;
-
+ 
+void solve(){
+    int n; cin >> n;
+    pair<int, int> a[n + 1];
+    for (int i = 0; i < n; i++){
+        int x; cin >> x;
+        a[i + 1] = make_pair(x, i + 1);
+    }
+    sort(a + 1, a + n + 1);
+    int ans = 0;
+    for (int i = 1; i <= n; i++){
+        for (int j = i + 1; j <= n; j++){
+            if (a[j].first * a[i].first >= 2 * n) break;
+            if (a[i].first * a[j].first == a[i].second + a[j].second) ans++;
+        }
+    }
+    cout << ans << endl;
+ 
 }
-
+ 
 /* Main()  function */
 int main()
 {
@@ -67,24 +80,12 @@ int main()
 cin >> t;
 while (t--)
 {
+   solve();
+
     
-    ll n,k;
-    cin>>n>>k;
-  long long maxcoprime = (n * (n-1))/2;
-  if(k>maxcoprime || k>0){
-    return 0;
-
-  }
-  vll arr(n);
-  vll prime ={2,3,5,7,11,13,17,19,23,29};
-
-  
-  
-
-
 }
 
-    return 0;   
+    return 0;
 }
 
 
