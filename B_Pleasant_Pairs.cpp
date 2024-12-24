@@ -49,24 +49,7 @@ typedef unsigned long long int uint64;
 
 /* clang-format on */
  
-void solve(){
-    int n; cin >> n;
-    pair<int, int> a[n + 1];
-    for (int i = 0; i < n; i++){
-        int x; cin >> x;
-        a[i + 1] = make_pair(x, i + 1);
-    }
-    sort(a + 1, a + n + 1);
-    int ans = 0;
-    for (int i = 1; i <= n; i++){
-        for (int j = i + 1; j <= n; j++){
-            if (a[j].first * a[i].first >= 2 * n) break;
-            if (a[i].first * a[j].first == a[i].second + a[j].second) ans++;
-        }
-    }
-    cout << ans << endl;
- 
-}
+
  
 /* Main()  function */
 int main()
@@ -80,7 +63,32 @@ int main()
 cin >> t;
 while (t--)
 {
-   solve();
+ int n;
+ cin>>n;
+ vector<pair<ll, int >> a(n);
+ for(int i=0; i<n; i++){
+    cin>>a[i].first;
+    a[i].second= i+1;
+
+
+ }
+ sort(a.begin(), a.end());
+ int ans=0; 
+ for(int i=0; i<n; i++){
+    for(int j=i+1; j<n; j++){
+
+        if(a[i].first *a[j].first > 2*n-1){
+            break;
+        }else{
+            if(a[i].first *a[j].first== a[i].second + a[j].second){
+                ans++;
+
+            }
+        }
+    }
+ }
+
+cout<<ans<<endl;
 
     
 }
