@@ -4,6 +4,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+/* Code written by Priyanshu Yadav IIT Kanpur  */
 
 /* TYPES  */
 #define ll long long
@@ -68,19 +69,6 @@ int main()
     cin >> t;
     while (t--)
     {
-         ll n, m;
-    cin >> n >> m;
-    vector<string>a(n);
-    for (int i = 0; i < n; i++) {
-        cin >> a[i];
-    }
-    ll cnt = 0;
-    for (int i = 0; i < n; i++) {
-        m -= a[i].size();
-        if (m < 0) break;
-        cnt++;
-    }
-    cout << cnt << "\n";
     }
     return 0;
 }
