@@ -48,6 +48,9 @@ typedef long long int int64;
 typedef unsigned long long int uint64;
 
 /* clang-format on */
+constexpr int kN = 2E5;
+ 
+int f[kN + 1], s[kN + 1];
 
 /* Main()  function */
 int main()
@@ -57,14 +60,8 @@ int main()
     // freopen("input.txt", "r", stdin);
     // #endif
 
-   ll t;
-cin >> t;
-while (t--)
-{
-    
-    ll n;
-    cin>>n;
 
+   
     // ll times= n/ 9;
     // ll store= n % 9;
     // ll sum =0;
@@ -74,24 +71,39 @@ while (t--)
 
     // }
 
-    ll sum=0; 
+  
     //Just basic implementation
+    //This solution also fukced up ... TLE 
 
-        for (int i = 1; i <= n; i++) {
-            int num = i;
-            int digit_sum = 0;
+        // for (int i = 1; i <= n; i++) {
+        //     int num = i;
+        //     int digit_sum = 0;
 
           
-            while (num > 0) {
-                digit_sum += num % 10; ///digit sum num%10 
-                num /= 10;
-            }
+        //     while (num > 0) {
+        //         digit_sum += num % 10; ///digit sum num%10 
+        //         num /= 10;
+        //     }
 
-            sum += digit_sum;
-        }
-    cout<<sum<<endl;
-}
+        //     sum += digit_sum;
+        // }
 
+
+        //Lets go to optimised sol ..
+    for (int i = 1; i <= kN; i++) {
+        f[i] = f[i / 10] + i % 10;
+        s[i] = s[i - 1] + f[i]; // presum  array;
+    }
+    
+    int t;
+    cin>>t;
+    while(t--){
+        int n;
+        cin>>n;
+        cout<<s[n]<<endl;
+
+    
+    }
     return 0;
 }
 
