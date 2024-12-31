@@ -1,8 +1,8 @@
-/* ॐ श्री वेंकटेश्वराये नमो नमः */ 
 #include <bits/stdc++.h>
 using namespace std;
-
-
+      
+/* OM NAMO NARAYANA */
+/* Code written by Priyanshu Yadav  */
 
 /* TYPES  */
 #define ll long long
@@ -21,15 +21,10 @@ using namespace std;
 #define pb push_back
 #define eb emplace_back
 
-
 /* PRINTS */
 template <class T>
-void print(vector<T> &v) { cout << "{"; for (auto x : v) cout << x << ","; cout << "\b}"; }
-void input(vector<ll>& v) {
-    for (auto& x : v) {
-        cin >> x;
-    }
-}
+void print_v(vector<T> &v) { cout << "{"; for (auto x : v) cout << x << ","; cout << "\b}"; }
+
 /* UTILS */
 #define MOD 1000000007
 #define PI 3.1415926535897932384626433832795
@@ -57,25 +52,25 @@ typedef unsigned long long int uint64;
 /* Main()  function */
 int main()
 {
-     ios::sync_with_stdio(0); 
-      cin.tie(0);
+
     // #ifndef ONLINE_JUDGE
     // freopen("input.txt", "r", stdin);
     // #endif
+// int gcd(int a, int b) {
+//     while (b) {
+//         a %= b;
+//         swap(a, b);
+//     }
+//     return a;
+// }
+ int a,b;
+ cin>>a>>b;
 
-    for(int i=0; i<MOD; i++){
-        int t;
-        cin>>t;
-        if(t ==1999){
-            cout<<"Correct"<<endl;
-                break;
+ int num = __gcd(a,b);
+ cout<<num<<endl;
+ 
 
-        }else{
-            cout<<"Wrong"<<endl;
-            
-        }
-    }
-   
-    
     return 0;
 }
+
+
