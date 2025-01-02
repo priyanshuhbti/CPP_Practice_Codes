@@ -61,21 +61,28 @@ int main()
 cin >> t;
 while (t--)
 {
-    		ll n;string s;cin>>n>>s;
-			ll count=0;
-			for(ll i=0;i<(ll)s.size();i++)
-			if(s[i]==48)
-			count++;
-			if(count==1)
-			cout<<"BOB"<<endl;
-			else
-			if(count&1)
-			cout<<"ALICE"<<endl;
-			else
-			cout<<"BOB"<<endl;
+ 
+ int n;
+ cin>>n;
+
+ int cnt[30]={};
+ ll ans=0;
+
+  while(n--){
+	int x;
+	cin>>x;
+	ans += cnt[__lg(x)]++;
+
+  }
+
+cout<<ans<<endl;
+
+
+  }
+
     
     
-}
+
 
     return 0;
 }
