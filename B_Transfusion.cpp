@@ -67,20 +67,20 @@ int main()
             else sum_odd += a[i];
         }
 
-        if (sum % n != 0)
-        {
-            no();
-            continue;
-        }
+        // if (sum % n != 0)
+        // {
+        //     no();
+        //     continue;
+        // }
 
-        int x = sum / n;
-        int odd = n / 2;
-        int even = (n + 1) / 2;
+        // int x = sum / n;
+        // int odd = n / 2;
+        // int even = (n + 1) / 2;
 
-        if ((sum_odd == odd * x) && (sum_even == even * x))
-        {
-            yes();
-        }
+        // if ((sum_odd == odd * x) && (sum_even == even * x))
+        // {
+        //     yes();
+        // }
         else
         {
             no();
