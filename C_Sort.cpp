@@ -51,17 +51,34 @@ typedef unsigned long long int uint64;
 
 /* Main()  function */
 int main()
-{
+{int t,n,q,i,l,r,an;
 
     // #ifndef ONLINE_JUDGE
     // freopen("input.txt", "r", stdin);
     // #endif
 
-   ll t;
-cin >> t;
+  cin>>t;
+  
 while (t--)
 {
     
+    		cin>>n>>q;
+		string a,b;
+		cin>>a>>b;
+		vector<vector<int>>s(n+1,vector<int>(26,0));
+		for(i=0;i<n;i++){
+			s[i+1]=s[i];
+			s[i+1][a[i]-'a']++;
+			s[i+1][b[i]-'a']--;
+		}
+		while(q--){
+			cin>>l>>r;
+			l-=1;
+			an=0;
+			for(i=0;i<26;i++)
+			an+=max(0,s[r][i]-s[l][i]);
+			cout<<an<<endl;
+		}
     
 }
 
