@@ -26,7 +26,7 @@ int main()
 
 int n;
 cin>>n;
-int mn=INT_MIN ,mx= 0;
+int mn=INT_MAX ,mx= 0;
 unordered_map<int ,ll> mp;
 for(int i=0; i<n; i++){
     int x;
@@ -38,7 +38,7 @@ for(int i=0; i<n; i++){
 
 
 }
-if(mx=mn){
+if(mx==mn){
     cout<<0<< " "<<mp[mn] *(mp[mn]-1)/2;
 
 }else{
