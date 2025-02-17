@@ -44,30 +44,19 @@ void no() { cout << "NO\n"; }
 /* clang-format on */
 
 void namo(){
-    	
- 
-	vector<int> a(n);
-	for (auto &i : a) cin >> i;
- 
-	vector<int> p(n + 1), ng(n + 1);
- 
-	for (int i = 0; i < n; i++) {
-		if (a[i] < 0) ng[i + 1] = -a[i];
-		else p[i + 1] = a[i];
-	}
- 
-	for (int i = n - 1; i >= 1; i--) {
-		ng[i] += ng[i + 1];
-	}
- 
-	for (int i = 1; i <= n; i++) p[i] += p[i - 1];
- 
-	int mx = 0;
- 
-	for (int i = 1; i <= n; i++) mx = max(mx, p[i] + ng[i]);
- 
-	cout << mx << "\n";
-
+		int n ; cin >> n;
+		map<int,int> mp;
+		for(int i = 0 ; i < n; i++) {
+			int x; cin >> x;
+			mp[x]++;
+		}
+		int s = 0 , d = 0 ;
+		for(auto [val , ct] : mp) {
+			if(ct == 1) s++;
+			else d++;
+		}
+		int ans = 2 * ceil(1.00* s / 2) + d;
+		cout << ans << endl;
 
 }
 
